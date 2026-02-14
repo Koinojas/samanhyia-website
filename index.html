@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
+<!-- First, load the Netlify Identity Widget -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<!-- Second, add this script to handle the redirect after login -->
+<script>
+  // Check if the widget is available on the window object
+  if (window.netlifyIdentity) {
+    // When the widget is ready, check if a user is logged in
+    window.netlifyIdentity.on("init", function(user) {
+      // If no user is logged in...
+      if (!user) {
+        // ...listen for a 'login' event
+        window.netlifyIdentity.on("login", function() {
+          // When a login happens, redirect the browser to the admin page
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 <body>
     <!-- Header Section -->
     <header>
