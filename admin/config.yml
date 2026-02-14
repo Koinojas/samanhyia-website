@@ -1,0 +1,111 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # 1. ANNOUNCEMENTS - Add/Edit/Delete posts
+  - name: "announcements"
+    label: "📢 Announcements"
+    folder: "admin/collections/announcements"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Time", name: "time", widget: "string"}
+      - {label: "Upload Image/Flyer", name: "image", widget: "image", required: false}
+      - {label: "Featured?", name: "featured", widget: "boolean", default: false, required: false}
+
+  # 2. WELCOME MESSAGES - From leadership
+  - name: "messages"
+    label: "👥 Leadership Messages"
+    folder: "admin/collections/messages"
+    create: true
+    fields:
+      - {label: "Name/Title", name: "title", widget: "string"} 
+      - {label: "Role", name: "role", widget: "string", options: ["District Director", "Subdistrict Leader", "Physician Assistant"]}
+      - {label: "Message", name: "message", widget: "markdown"}
+      - {label: "Photo", name: "photo", widget: "image", required: false}
+      - {label: "Display Order", name: "order", widget: "number", default: 1}
+
+  # 3. FACILITIES - All CHPS zones
+  - name: "facilities"
+    label: "🏥 Facilities"
+    folder: "admin/collections/facilities"
+    create: true
+    fields:
+      - {label: "Facility Name", name: "title", widget: "string"}
+      - {label: "Type", name: "type", widget: "select", options: ["Main Center", "CHPS Compound"]}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Services Offered", name: "services", widget: "text"}
+      - {label: "Hours", name: "hours", widget: "string"}
+      - {label: "Phone (optional)", name: "phone", widget: "string", required: false}
+      - {label: "Special Notes", name: "notes", widget: "text", required: false}
+      - {label: "Photo", name: "image", widget: "image", required: false}
+
+  # 4. STAFF - Unit leads (titles only)
+  - name: "staff"
+    label: "👨‍⚕️ Staff Units"
+    folder: "admin/collections/staff"
+    create: true
+    fields:
+      - {label: "Unit Name", name: "unit", widget: "string"}
+      - {label: "Position Title", name: "position", widget: "string"}
+      - {label: "Display Order", name: "order", widget: "number", default: 1}
+
+  # 5. SERVICES - What you offer
+  - name: "services"
+    label: "⚕️ Services"
+    folder: "admin/collections/services"
+    create: true
+    fields:
+      - {label: "Service Name", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Icon", name: "icon", widget: "string", required: false}
+      - {label: "Display Order", name: "order", widget: "number", default: 1}
+
+  # 6. HOME PAGE - Hero section editable
+  - name: "home"
+    label: "🏠 Home Page"
+    files:
+      - name: "hero"
+        label: "Hero Section"
+        file: "admin/content/home/hero.md"
+        fields:
+          - {label: "Welcome Title", name: "title", widget: "string"}
+          - {label: "Welcome Message", name: "message", widget: "text"}
+          - {label: "Background Image", name: "image", widget: "image", required: false}
+          - {label: "Emergency Button Text", name: "button_text", widget: "string", default: "Emergency Contact"}
+
+  # 7. CONTACT INFO - Everything editable
+  - name: "contact"
+    label: "📞 Contact Information"
+    files:
+      - name: "info"
+        label: "Contact Details"
+        file: "admin/content/contact/info.md"
+        fields:
+          - {label: "Phone 1", name: "phone1", widget: "string"}
+          - {label: "Phone 2", name: "phone2", widget: "string"}
+          - {label: "Emergency Phone", name: "emergency", widget: "string"}
+          - {label: "Email 1", name: "email1", widget: "string"}
+          - {label: "Email 2", name: "email2", widget: "string"}
+          - {label: "Physical Address", name: "address", widget: "text"}
+          - {label: "Digital Address", name: "digital", widget: "string"}
+          - {label: "Opening Hours", name: "hours", widget: "text"}
+
+  # 8. LEADERSHIP MESSAGES SECTION - For the home page
+  - name: "leadership"
+    label: "⭐ Leadership Welcome"
+    files:
+      - name: "welcome"
+        label: "Welcome Messages"
+        file: "admin/content/leadership/welcome.md"
+        fields:
+          - {label: "Show Messages on Homepage?", name: "enabled", widget: "boolean", default: true}
+          - {label: "Section Title", name: "title", widget: "string", default: "Welcome Messages from Our Leadership"}

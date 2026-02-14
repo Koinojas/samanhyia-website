@@ -1,0 +1,283 @@
+/* Tablet */
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-section .container {
+        grid-template-columns: 1fr;
+    }
+}
+/* About Page Responsive */
+@media (max-width: 768px) {
+    .vision-mission .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .history h3, .catchment-area h3, .vision-mission h3, .authority h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title h2 {
+        font-size: 1.5rem;
+    }
+    
+    .catchment-area ul {
+        margin-left: 20px;
+    }
+    
+    .history p, .catchment-area p, .authority p, .vision-box p, .mission-box p {
+        font-size: 1rem;
+    }
+}
+/* Services Page Responsive */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .service-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .service-icon {
+        font-size: 2.5rem;
+    }
+    
+    .service-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .schedule-table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .service-content p {
+        font-size: 1rem;
+    }
+    
+    .schedule-table th,
+    .schedule-table td {
+        padding: 10px;
+    }
+    
+    .opd-schedule h3 {
+        font-size: 1.5rem;
+    }
+}
+/* Facilities Page Responsive */
+@media (max-width: 768px) {
+    .facility-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .facility-header h3 {
+        font-size: 1.4rem;
+    }
+    
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .facility-card h4 {
+        font-size: 1.2rem;
+    }
+    
+    .chps-facilities h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .facility-card {
+        padding: 15px;
+    }
+    
+    .facility-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .facility-details p {
+        font-size: 0.9rem;
+    }
+}
+/* Announcements Page Responsive */
+@media (max-width: 768px) {
+    .announcement-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .announcement-date {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        background: #f0f7ff;
+        padding: 10px;
+    }
+    
+    .announcement-date .day {
+        font-size: 1.5rem;
+    }
+    
+    .announcement-date .month,
+    .announcement-date .year {
+        display: inline;
+        font-size: 1rem;
+    }
+    
+    .announcement-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .announcement-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .announcement-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 480px) {
+    .announcement-card {
+        padding: 15px;
+    }
+    
+    .announcement-date {
+        flex-wrap: wrap;
+    }
+    
+    .announcement-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .announcement-content p {
+        font-size: 0.95rem;
+    }
+    
+    .announcement-meta {
+        font-size: 0.85rem;
+    }
+    
+    .announcement-image img {
+        max-height: 150px;
+    }
+}
+/* Contact Page Responsive */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .contact-card {
+        padding: 20px 15px;
+    }
+    
+    .contact-icon {
+        font-size: 2.5rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-detail {
+        font-size: 1rem;
+    }
+    
+    .map-container {
+        height: 350px;
+    }
+    
+    .map-section h3,
+    .contact-form-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+        max-width: 300px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .map-container {
+        height: 250px;
+    }
+    
+    .address-box p {
+        font-size: 0.9rem;
+    }
+    
+    .contact-form {
+        padding: 15px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    
+    .form-note,
+    .form-disclaimer {
+        font-size: 0.85rem;
+    }
+}

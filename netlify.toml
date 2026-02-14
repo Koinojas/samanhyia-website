@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+
+[build.environment]
+  HUGO_VERSION = "0.80.0"
+
+[context.production]
+  command = "echo 'Static site ready'"
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
