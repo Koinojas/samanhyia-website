@@ -1,6 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: koinojas/samanhyia-website  # <-- replace with your GitHub repo
   branch: main
+  auth_type: oauth
+
+publish_mode: editorial_workflow  # Allows drafts before publishing
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
