@@ -3,6 +3,8 @@ backend:
   repo: koinojas/samanhyia-website  # <-- replace with your GitHub repo
   branch: main
   auth_type: oauth
+  base_url: https://your-username.github.io/samanhyia-website/admin/
+  auth_scope: "repo"
 
 publish_mode: editorial_workflow  # Allows drafts before publishing
 
