@@ -4,10 +4,9 @@ backend:
   branch: local-site
   auth_type: implicit
   app_id: Ov23lic8g1Uvk5ftC5W0
-  auth_endpoint: https://oauth.decaps.org/auth
-  
-  
+
 publish_mode: editorial_workflow
+  
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
