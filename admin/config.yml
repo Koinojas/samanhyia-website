@@ -4,8 +4,6 @@ backend:
   branch: local-site
   auth_type: implicit
   app_id: Ov23lic8g1Uvk5ftC5W0
-  base_url: https://koinojas.github.io
-  site_domain: koinojas.github.io
 
 publish_mode: editorial_workflow
   
