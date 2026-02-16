@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>CMS Login - Samanhyia Health Center Github</title>
-  </head>
-  <body>
-    <!-- Load Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-    <!-- GitHub OAuth login handled via config.yml -->
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMS Login - Samanhyia Health Center</title>
+
+  <!-- Fix OAuth redirect for GitHub Pages subfolder -->
+  <script>
+    if (window.location.hostname.includes("github.io")) {
+      window.CMS_BASE_PATH = "/samanhyia-website/admin/";
+    }
+  </script>
+
+</head>
+<body>
+
+  <!-- Load Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+</body>
 </html>

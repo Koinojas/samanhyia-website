@@ -2,17 +2,16 @@ backend:
   name: github
   repo: koinojas/samanhyia-website
   branch: local-site
-  base_url: https://koinojas.github.io/samanhyia-website/admin/
-  auth_endpoint: https://oauth.netlifycms.org/auth
-  client_id: Ov23lic8g1Uvk5ftC5W0   # GitHub OAuth app Client ID
+  # Using implicit grant for GitHub Pages authentication
+  auth_type: implicit
+  app_id: Ov23lic8g1Uvk5ftC5W0
 
-publish_mode: editorial_workflow  # Allows drafts before publishing
+publish_mode: editorial_workflow
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  # 1. ANNOUNCEMENTS - Add/Edit/Delete posts
   - name: "announcements"
     label: "📢 Announcements"
     folder: "admin/collections/announcements"
@@ -27,7 +26,6 @@ collections:
       - {label: "Upload Image/Flyer", name: "image", widget: "image", required: false}
       - {label: "Featured?", name: "featured", widget: "boolean", default: false, required: false}
 
-  # 2. WELCOME MESSAGES - From leadership
   - name: "messages"
     label: "👥 Leadership Messages"
     folder: "admin/collections/messages"
@@ -39,7 +37,6 @@ collections:
       - {label: "Photo", name: "photo", widget: "image", required: false}
       - {label: "Display Order", name: "order", widget: "number", default: 1}
 
-  # 3. FACILITIES - All CHPS zones
   - name: "facilities"
     label: "🏥 Facilities"
     folder: "admin/collections/facilities"
@@ -54,7 +51,6 @@ collections:
       - {label: "Special Notes", name: "notes", widget: "text", required: false}
       - {label: "Photo", name: "image", widget: "image", required: false}
 
-  # 4. STAFF - Unit leads (titles only)
   - name: "staff"
     label: "👨‍⚕️ Staff Units"
     folder: "admin/collections/staff"
@@ -64,7 +60,6 @@ collections:
       - {label: "Position Title", name: "position", widget: "string"}
       - {label: "Display Order", name: "order", widget: "number", default: 1}
 
-  # 5. SERVICES - What you offer
   - name: "services"
     label: "⚕️ Services"
     folder: "admin/collections/services"
@@ -75,7 +70,6 @@ collections:
       - {label: "Icon", name: "icon", widget: "string", required: false}
       - {label: "Display Order", name: "order", widget: "number", default: 1}
 
-  # 6. HOME PAGE - Hero section editable
   - name: "home"
     label: "🏠 Home Page"
     files:
@@ -88,7 +82,6 @@ collections:
           - {label: "Background Image", name: "image", widget: "image", required: false}
           - {label: "Emergency Button Text", name: "button_text", widget: "string", default: "Emergency Contact"}
 
-  # 7. CONTACT INFO - Everything editable
   - name: "contact"
     label: "📞 Contact Information"
     files:
@@ -105,7 +98,6 @@ collections:
           - {label: "Digital Address", name: "digital", widget: "string"}
           - {label: "Opening Hours", name: "hours", widget: "text"}
 
-  # 8. LEADERSHIP MESSAGES SECTION - For the home page
   - name: "leadership"
     label: "⭐ Leadership Welcome"
     files:
