@@ -5,6 +5,8 @@ backend:
   # Using implicit grant for GitHub Pages authentication
   auth_type: implicit
   app_id: Ov23lic8g1Uvk5ftC5W0
+  auth_endpoint: https://oauth.decaps.org/auth
+
 
 publish_mode: editorial_workflow
 
