@@ -3,7 +3,7 @@ backend:
   repo: koinojas/samanhyia-website
   branch: local-site
   # Using implicit grant for GitHub Pages authentication
-  auth_type: implicit
+  base_url: https://oauth.decaps.org
   app_id: Ov23lic8g1Uvk5ftC5W0
   auth_endpoint: https://oauth.decaps.org/auth
 
