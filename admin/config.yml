@@ -2,10 +2,10 @@ backend:
   name: github
   repo: koinojas/samanhyia-website
   branch: local-site
+  uth_type: implicit
+  app_id: Ov23lic8g1Uvk5ftC5W0
   
-  base_url: https://oauth.decaps.org
   
-
 publish_mode: editorial_workflow
 
 media_folder: "images/uploads"
