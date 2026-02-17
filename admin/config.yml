@@ -4,6 +4,7 @@ backend:
   branch: local-site
   base_url: https://samanhyia-proxy.wineric585.workers.dev
   auth_endpoint: auth
+  app_id: Ov23lic8g1Uvk5ftC5W0
 
 publish_mode: editorial_workflow
   
