@@ -1,12 +1,7 @@
 backend:
-  name: github
-  repo: koinojas/samanhyia-website
+  name: git-gateway
   branch: local-site
-  base_url: https://samanhyia-proxy.wineric585.workers.dev
-  client_id: Ov23lic8g1Uvk5ftC5W0
-  auth_endpoint: auth
-  auth_type: pkce
-  
+
 publish_mode: editorial_workflow
   
 
