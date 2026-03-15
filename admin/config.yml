@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: local-site
-  
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
@@ -26,8 +25,8 @@ collections:
     folder: "admin/collections/messages"
     create: true
     fields:
-      - {label: "Name/Title", name: "title", widget: "string"} 
-      - {label: "Role", name: "role", widget: "string", options: ["District Director", "Subdistrict Leader", "Physician Assistant"]}
+      - {label: "Name/Title", name: "title", widget: "string"}
+      - {label: "Role", name: "role", widget: "select", options: ["District Director", "Subdistrict Leader", "Physician Assistant"]}
       - {label: "Message", name: "message", widget: "markdown"}
       - {label: "Photo", name: "photo", widget: "image", required: false}
       - {label: "Display Order", name: "order", widget: "number", default: 1}
