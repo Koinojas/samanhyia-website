@@ -1,11 +1,6 @@
 [build]
-  publish = "."
-
-[build.environment]
-  HUGO_VERSION = "0.80.0"
-
-[context.production]
-  command = "echo 'Static site ready'"
+  command = "npm install && node build.js"
+  publish = "dist"
 
 [[redirects]]
   from = "/admin"

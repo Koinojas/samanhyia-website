@@ -63,6 +63,7 @@ collections:
       - {label: "Phone (optional)", name: "phone", widget: "string", required: false}
       - {label: "Special Notes", name: "notes", widget: "text", required: false}
       - {label: "Photo", name: "image", widget: "image", required: false}
+      - {label: "Display Order", name: "order", widget: "number", default: 1, required: false}
 
   - name: "staff"
     label: "👨‍⚕️ Staff Units"

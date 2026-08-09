@@ -1,0 +1,12 @@
+{
+  "name": "samanhyia-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Samanhyia Health Center website build",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
